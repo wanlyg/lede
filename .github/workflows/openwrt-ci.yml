@@ -90,7 +90,7 @@ jobs:
 
         run: |
 
-          cd package/lean/ && git clone https://github.com/fw876/helloworld && mv helloworld/luci-app-ssr-plus/ luci-app-ssr-plus && cd ../ && cd ../
+          cd package/lean/ && git clone https://github.com/fw876/helloworld && rm helloworld/README.md && mv helloworld/* ./ && rm -rf ./helloworld cd ../ && cd ../
 
           cd package/ && git clone https://github.com/chengood5000/passwall652 && cd ../
 
