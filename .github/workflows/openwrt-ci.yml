@@ -92,7 +92,7 @@ jobs:
 
           cd package/lean/ && git clone https://github.com/fw876/helloworld && rm helloworld/README.md && mv helloworld/* ./ && rm -rf ./helloworld cd ../ && cd ../
 
-          cd package/ && git clone https://github.com/chengood5000/passwall652 && cd ../
+          # cd package/ && git clone https://github.com/chengood5000/passwall652 && cd ../
 
           ./scripts/feeds update -a
 
