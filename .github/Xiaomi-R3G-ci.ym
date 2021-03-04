@@ -418,6 +418,6 @@ jobs:
 
         with:
 
-          name: OpenWrt firmware
+          name: Xiaomi R3G
 
           path: ./bin/targets/
