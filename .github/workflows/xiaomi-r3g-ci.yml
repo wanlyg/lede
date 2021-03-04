@@ -418,6 +418,6 @@ jobs:
 
         with:
 
-          name: Xiaomi R3G
+          name: xiaomi r3g
 
           path: ./bin/targets/
