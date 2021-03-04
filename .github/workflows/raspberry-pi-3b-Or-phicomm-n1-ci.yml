@@ -14,7 +14,7 @@
 
 #
 
-name: OpenWrt-CI
+name: raspberry-pi-3b-Or-phicomm-n1-CI
 
 on:
 
