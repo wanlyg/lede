@@ -418,6 +418,6 @@ jobs:
 
         with:
 
-          name: raspberry pi 3b / phicomm n1
+          name: raspberry pi 3b Or phicomm n1
 
           path: ./bin/targets/
