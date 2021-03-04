@@ -14,7 +14,7 @@
 
 #
 
-name: OpenWrt-CI
+name: xiaomi-r3g-CI
 
 on:
 
