@@ -252,7 +252,9 @@ jobs:
 
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
 
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
+          
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
 
           CONFIG_PACKAGE_luci-app-ttyd=y
 
@@ -305,6 +307,8 @@ jobs:
           CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
 
           CONFIG_PACKAGE_usb-modeswitch=y
+          
+          CONFIG_PACKAGE_ddns-scripts_cloudflare.com-v4=y
 
           EOF
 
