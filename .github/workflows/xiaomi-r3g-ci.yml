@@ -362,7 +362,11 @@ jobs:
 
       - name: Prepare artifact
 
-        run: find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
+        run: |
+
+          find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
+
+          cp ./.config ./bin/targets/
 
       - name: Upload artifact
 
