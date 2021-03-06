@@ -14,7 +14,7 @@
 
 #
 
-name: xiaomi-r3g-CI
+name: raspberry-pi-3b-Or-phicomm-n1-CI
 
 on:
 
@@ -162,15 +162,15 @@ jobs:
 
           # 
 
-          # 编译小米r3g固件:
+          # 编译树莓派3b/斐讯n1固件:
 
           cat >> .config <<EOF
 
-          CONFIG_TARGET_ramips=y
+          CONFIG_TARGET_brcm2708=y
 
-          CONFIG_TARGET_ramips_mt7621=y
+          CONFIG_TARGET_brcm2708_bcm2710=y
 
-          CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_mir3g=y
+          CONFIG_TARGET_brcm2708_bcm2710_DEVICE_rpi-3=y
 
           EOF
 
@@ -186,7 +186,7 @@ jobs:
 
           cat >> .config <<EOF
 
-          # CONFIG_EFI_IMAGES=y
+          CONFIG_EFI_IMAGES=y
 
           EOF
 
@@ -240,7 +240,17 @@ jobs:
 
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
 
+          CONFIG_PACKAGE_luci-app-aria2=y
+
           CONFIG_PACKAGE_luci-app-frpc=y
+
+          CONFIG_PACKAGE_luci-app-minidlna=y
+
+          CONFIG_PACKAGE_luci-app-openvpn=y
+
+          CONFIG_PACKAGE_luci-app-openvpn-server=y
+
+          CONFIG_PACKAGE_luci-app-qbittorrent=y
 
           CONFIG_PACKAGE_luci-app-ssr-plus=y
 
@@ -254,17 +264,27 @@ jobs:
 
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
           
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+          
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
 
           CONFIG_PACKAGE_luci-app-ttyd=y
 
           CONFIG_PACKAGE_luci-app-v2ray-server=y
 
+          CONFIG_PACKAGE_luci-app-verysync=y
+
           CONFIG_PACKAGE_luci-app-webadmin=y
+
+          CONFIG_PACKAGE_luci-app-wireguard=y
 
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
           CONFIG_PACKAGE_luci-app-zerotier=y
+
+          CONFIG_PACKAGE_luci-app-squid=y
+
+          CONFIG_PACKAGE_luci-app-tinyproxy=y
 
           CONFIG_PACKAGE_luci-app-mwan3=y
 
@@ -289,6 +309,8 @@ jobs:
           CONFIG_PACKAGE_curl=y
 
           CONFIG_PACKAGE_htop=y
+
+          CONFIG_PACKAGE_nano=y
 
           CONFIG_PACKAGE_screen=y
 
@@ -366,11 +388,7 @@ jobs:
 
       - name: Prepare artifact
 
-        run: |
-
-          find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
-
-          cp ./.config ./bin/targets/
+        run: find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
       - name: Upload artifact
 
@@ -378,6 +396,6 @@ jobs:
 
         with:
 
-          name: xiaomi r3g
+          name: raspberry pi 3b Or phicomm n1
 
           path: ./bin/targets/
