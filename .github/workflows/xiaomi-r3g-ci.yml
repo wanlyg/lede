@@ -254,6 +254,8 @@ jobs:
 
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
           
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+          
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
 
           CONFIG_PACKAGE_luci-app-ttyd=y
