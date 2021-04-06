@@ -311,6 +311,10 @@ jobs:
           CONFIG_PACKAGE_usb-modeswitch=y
           
           CONFIG_PACKAGE_ddns-scripts_cloudflare.com-v4=y
+          
+          CONFIG_PACKAGE_coreutils-nohup=y
+          
+          CONFIG_PACKAGE_bash=y
 
           EOF
 
