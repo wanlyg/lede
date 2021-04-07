@@ -90,9 +90,11 @@ jobs:
 
         run: |
 
-          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+          # sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 
           # cd package/ && git clone https://github.com/chengood5000/passwall652 && cd ../
+          
+          cd package/lean/ && git clone https://github.com/jerrykuku/lua-maxminddb.git && git clone https://github.com/jerrykuku/luci-app-vssr.git  && cd ../
 
           ./scripts/feeds update -a
 
@@ -315,6 +317,14 @@ jobs:
           CONFIG_PACKAGE_coreutils-nohup=y
           
           CONFIG_PACKAGE_bash=y
+          
+          CONFIG_PACKAGE_luci-app-uugamebooster=y
+          
+          CONFIG_PACKAGE_luci-app-qos=y
+          
+          CONFIG_PACKAGE_luci-app-sqm=y
+          
+          CONFIG_PACKAGE_luci-app-haproxy-tcp=y
 
           EOF
 
