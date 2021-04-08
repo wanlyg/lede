@@ -326,7 +326,7 @@ jobs:
           
           CONFIG_PACKAGE_luci-app-haproxy-tcp=y
           
-          CONFIG_PACKAGE_luci-app-vss=y
+          CONFIG_PACKAGE_luci-app-vssr=y
           
           CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray=y
           
